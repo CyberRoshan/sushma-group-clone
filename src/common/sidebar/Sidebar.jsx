@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function Sidebar({sidbarStatus,setSidebarStatus}) {
     let [dropDown,setDropDown]=useState(false)
   return (
-    <section className={`bg-primary-color ${sidbarStatus ? "block   w-screen" : "duration-700  w-[0vw]  hidden "} duration-500   right-0 fixed z-[99999]  h-screen`}>
+    <section className={`bg-primary-color ${sidbarStatus ? "block transition duration-500  w-screen" : "duration-700  w-[0vw] transition hidden "}    right-0 fixed z-[99999]  h-screen`}>
         <div className='grid sm:grid-cols-2 grid-cols-1 '>
             <div className='bg-primary-color sm:block hidden w-full h-screen relative border '>
                 <img className='w-[60%] absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]' src="https://staging.adiyogitechnology.com/sushmagroup/assets/image_1%202-mvcGa-Xf.png" alt="" />
