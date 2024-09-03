@@ -7,6 +7,13 @@ export default function Header() {
   
   let [sidbarStatus,setSidebarStatus]=useState(false)
   const [scroll,setScroll]=useState(false)
+
+  window.onmousemove = ()=>{
+    setScroll(true)
+    setTimeout(() => {
+      setScroll(false)
+    }, 1000);
+  };
   window.onscroll=()=>{
             const topScroll=window.scrollY
             // console.log(topScroll);
@@ -16,6 +23,9 @@ export default function Header() {
               else{
                 setScroll(false)
               } 
+              setTimeout(() => {
+                setScroll(false)
+              }, 1000);
           }
   return (
     <>
